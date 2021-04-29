@@ -1,0 +1,34 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: monthly
+    time: "21:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: botocore
+    versions:
+    - 1.19.47
+    - 1.19.63
+    - 1.20.17
+  - dependency-name: boto3
+    versions:
+    - 1.16.47
+    - 1.16.63
+    - 1.17.17
+  - dependency-name: s3transfer
+    versions:
+    - 0.3.4
+  - dependency-name: google-cloud-core
+    versions:
+    - 1.5.0
+  - dependency-name: azure-common
+    versions:
+    - 1.1.26
+  - dependency-name: readme-renderer[md]
+    versions:
+    - "28.0"
+  - dependency-name: google-cloud-dns
+    versions:
+    - 0.32.1
